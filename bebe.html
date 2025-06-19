@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ความในใจของเรา 💌</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .message {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #ff3399;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .beb {
+      padding: 15px 30px;
+      margin: 20px;
+      border: none;
+      font-size: 1.2em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: #ff3399;
+      color: white;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 2em;
+      animation: floatUp 2s ease-out forwards;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-150px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="message">
+    <h1>ถึงคนที่ฉันรักมากที่สุด 💖</h1>
+    <p>
+      ขอโทษนะสำหรับทุกอย่างที่ผ่านมา...<br>
+      ฉันอาจทำให้เธอเสียใจ แต่ไม่มีวันไหนที่ไม่คิดถึงและไม่รักเธอเลย<br>
+      ขอบคุณที่ยังอยู่ตรงนี้ ขอให้โอกาสฉันได้ดูแลเธออีกครั้ง 💕<br>
+      รักเสมอ ไม่ว่าจะเกิดอะไรขึ้น 🥺
+    </p>
+  </div>
+
+  <button class="beb">ให้อภัยเค้านะค่าบบ💕</button>
+
+  <script>
+    const button = document.querySelector(".beb");
+
+    button.addEventListener("click", function () {
+      // สร้างหัวใจลอยหลายดวง
+      for (let i = 0; i < 10; i++) {
+        const heart = document.createElement("div");
+        heart.textContent = "💖";
+        heart.className = "heart";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.top = "80%";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 2000);
+      }
+
+      // กล่องข้อความตอบกลับ
+      setTimeout(() => {
+        alert("ขอบคุณที่ให้อภัยนะครับ เค้าจะไม่ทำให้เสียใจอีกแล้วนะ 💗");
+      }, 600);
+    });
+  </script>
+
+</body>
+</html>

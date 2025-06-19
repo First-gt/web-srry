@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ขอโทษนะคนดี 🥺</title>
+  <style>
+    body {
+      background-image: url("lov.png");
+      background-size: cover;
+      position: center;
+      padding: 50px;
+      font-family: 'Kanit', sans-serif;
+      text-align: center;
+      padding: 200px;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #d6336c;
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+      color: #1c8eb5;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      font-size: 1.2em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .yes {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .no {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .yes:hover {
+      background-color: #218838;
+    }
+
+    .no:hover {
+      background-color: #c82333;
+    }
+
+    #result {
+      margin-top: 40px;
+      font-size: 1.8em;
+    }
+
+    /* หัวใจลอย */
+    .heart {
+      color: #ff3366;
+      font-size: 24px;
+      position: absolute;
+      animation: floatUp 2s ease-out forwards;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <h1>ขอโทษนะที่รัก 💔</h1>
+  <p>เรารู้ว่าเราผิด... ยกโทษให้เราได้มั้ย 🥺</p>
+
+  <form>
+    <a href="bebe.html">
+      <button type="button" class="btn yes" onclick="sayYes()">เค้ามีไรอยากบอกอยากรู้ไม่</button>
+    </a>
+    <button type="button" class="btn no" id="noBtn" onclick="moveNo()">ไม่อยากรู้</button>
+  </form>
+
+  <p id="result"></p>
+
+  <!-- JavaScript -->
+  <script>
+
+    function moveNo() {
+      const noBtn = document.getElementById("noBtn");
+      const x = Math.random() * (window.innerWidth - 200);
+      const y = Math.random() * (window.innerHeight - 200);
+      noBtn.style.position = "absolute";
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
